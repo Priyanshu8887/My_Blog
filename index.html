@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>My Blog</title>
+  <link rel="stylesheet" type="text/css" >
+  <style>
+    body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    }
+
+    header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    }
+
+    h1 {
+    margin: 0;
+    }
+
+    nav ul {
+    list-style: none;
+    padding: 0;
+    }
+
+    nav li {
+    display: inline;
+    margin-right: 10px;
+    }
+
+    nav a {
+    color: #fff;
+    text-decoration: none;
+    }
+
+    main {
+    padding: 20px;
+    }
+
+    section {
+    margin-bottom: 20px;
+    }
+
+    footer {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    }
+    .infolist {
+      display: none;
+      padding-left: 7%;
+      padding-right: 80%;
+      padding-top: 0%;
+    }
+    .img {
+        transition-delay: .2s;
+        height: 20%;
+        width: 50%;  
+        border: 2px solid black;
+        border-radius: 5%; 
+        margin-left : 20%; 
+        margin-top : 2%; 
+
+    }
+    .img:hover {
+        transform: scale(1.05);
+    }  
+  </style>
+</head>
+<body>
+  <header>
+    <h1>My Blog</h1>
+    <nav>
+      <ul>
+        <li><a href="#" onclick="open_('Home')">Home</a></li>
+        <li><a href="#" onclick="open_('About')">About</a></li>
+        <li><a href="#" onclick="open_('Contact')">Contact</a></li>
+      </ul>
+      <ul id="About" class="infolist" style="padding-left: 3%;">
+        <li><a>Priyanshu Dubey</a></li><br>
+        <li><a>BTech'20</a></li><br>
+        <li><a>VNIT NAGPUR</a></li>
+      </ul>
+      <ul id="Contact" class="infolist">
+        <li><a>+91-8887705390</a></li>
+        <li><a>priyanshudubey8887@gmail.com</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section>
+      <h2>Welcome to My Blog</h2>
+      <p>This is a place where I share my thoughts and ideas.</p>
+    </section>
+
+    <section>
+      <h2>  Posts</h2>
+
+      <hr>
+      <ul id="post-list" >
+        <!-- Posts will be dynamically added here -->
+        <li>
+            <a href="https://priyanshu8887.github.io/music-project/">
+                <img class="img" style="border-radius: 10%;" src="Screenshot (118).png">
+            </a>
+        </li>
+        <li>
+            <a href="https://www.linkedin.com/in/priyanshu-dubey-85245b228">
+                <img class="img" style="border-radius: 10%;" src="Screenshot (120).png">
+            </a>
+        </li>  
+        <li>
+            <a href="https://github.com/Priyanshu8887">
+                <img class="img" style="border-radius: 10%; border-color: red;" src="Screenshot (119).png">
+            </a>
+        </li>      
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2023 My Blog. All rights reserved.</p>
+  </footer>
+  
+  <SCRIPT>
+    function open_(name) {
+        var x = document.getElementById(name);
+        var y = document.getElementById('About');
+        var z = document.getElementById('Contact');
+        if (x.style.display == 'none') {
+          y.style.display = 'none';
+          z.style.display = 'none';
+          x.style.display = 'block';
+        } 
+        else {
+          x.style.display = 'none';
+        }
+    }
+  </SCRIPT>
+</body>
+</html>
